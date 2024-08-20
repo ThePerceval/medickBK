@@ -1,5 +1,7 @@
 spring:
   application:
     name: demo
-  jmx:
-    enabled: false
+constant:
+  service1: "Slave1Service"
+  service2: "Slave2Service"
+  methodName: "changeString"

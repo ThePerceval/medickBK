@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.integration.channel.DirectChannel;
-import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +14,7 @@ import java.util.List;
 @IntegrationComponentScan
 public class AppRunner implements CommandLineRunner {
     private final DirectChannel outputChannel;
-    private final MessageChannel inputChannel;
+    private final DirectChannel inputChannel;
     private final String[] strings = {"Item1", "Item2", "Item3", "Item4"};
 
     @Override
